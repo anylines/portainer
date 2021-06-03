@@ -4,7 +4,7 @@ plain='\033[0m'
 # check root
 [[ $EUID -ne 0 ]] && echo -e "${red}错误: ${plain} 必须使用root用户运行此脚本！\n" && exit 1
 cd /root/ &&
-curl -sL https://raw.githubusercontent.com/Anylines/portainer-ce/main/public-public.tar.gz | tar xz &&
+curl -sL https://raw.githubusercontent.com/Anylines/portainer-arm/main/public-public.tar.gz | tar xz &&
 rm -rf public &&
 mv public-public public &&
 docker stop portainer &&
