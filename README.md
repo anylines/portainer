@@ -1,1 +1,1 @@
-sh -c "$(curl -kfsSl https://gitee.com/expin/public/raw/master/one.sh)"
+sh -c "$(curl -kfsSl https://raw.githubusercontent.com/Anylines/portainer-arm/main/one.sh)"
