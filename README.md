@@ -1,16 +1,1 @@
-# portainer-ce
-
-#!/bin/bash
-red='\033[0;31m'
-plain='\033[0m'
-# check root
-[[ $EUID -ne 0 ]] && echo -e "${red}错误: ${plain} 必须使用root用户运行此脚本！\n" && exit 1
-cd /root/ &&
-curl -sL https://github.com/eysp/public/archive/public.tar.gz | tar xz &&
-rm -rf public &&
-mv public-public public &&
-docker stop portainer &&
-docker rm portainer &&
-docker rmi portainer/portainer:linux-arm64 &&
-docker rmi portainer/portainer-ce:linux-arm64 &&
-docker run -d --restart=always --name="portainer" -p 9999:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data -v /root/public:/public portainer/portainer-ce:linux-arm64
+sh -c "$(curl -kfsSl https://gitee.com/expin/public/raw/master/one.sh)"
