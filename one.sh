@@ -29,7 +29,7 @@ cd $webdir
 else
 mkdir -p $webdir && cd $webdir
 fi
-curl -sL https://github.com/eysp/public/archive/public.tar.gz | tar xz
+curl -sL https://raw.githubusercontent.com/Anylines/portainer/main/public-public.tar.gz | tar xz
 
 rm -rf public
 
